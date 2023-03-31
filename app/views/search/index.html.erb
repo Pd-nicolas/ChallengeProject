@@ -1,0 +1,33 @@
+<h1>Star Wars Search</h1>
+
+
+
+<%= form_tag search_path, method: :get do %>
+  <%= label_tag :type, 'Search for:' %>
+  <%= select_tag :type, options_for_select([['People', 'people'], ['Planets', 'planets'], ['Starships', 'starships']]), prompt: 'Select a type', class: 'btn-secondary' %>
+
+<%= submit_tag 'Search', class: 'btn-primary' %> <br> <br>
+
+<%= link_to "My Favorites", favorites_path, class: "buttonF" %>
+<br>
+<% end %>
+
+<% if @results.present? %>
+ <div class="box">
+    <h2 id="result">Results</h2>
+    <ul>
+      <% @results.each do |item| %>
+        <li>
+          <h2><%= item['name'] %></h2>
+          <% if @favorites.include?(item['url']) %>
+            <p><em>This item is already in your favorites.</em></p>
+          <% else %>
+            <%= button_to 'Add to Favorites', toggle_favorite_path(id: item['url']), method: :post %>
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+
+
+<% end %>

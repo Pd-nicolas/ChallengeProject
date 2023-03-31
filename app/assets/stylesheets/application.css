@@ -1,0 +1,105 @@
+
+body {
+    background-image: url('/assets/star.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Star Jedi', Arial, sans-serif;
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+    color: yellow;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Roboto Mono', monospace;
+  }
+
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    padding: 10px;
+    margin-bottom: 5px;
+    background-color: black;
+    border-radius: 5px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  }
+
+  .favorites {
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  }
+
+  .box{
+    border: solid;
+    text-align: center;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+
+  }
+
+  button {
+    background-color: #0074d9;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid #0074d9;
+  }
+
+  button:hover {
+    box-shadow: 0px 5px 30px rgba(34, 152, 215, 0.3);
+    transform: translateY(-2px);
+    background-color: #fff;
+    color: #0074d9;
+  }
+
+  .btn-primary {
+    background-color: #ffe81f;
+    border-color: #ffe81f;
+    color: #000;
+  }
+
+  .btn-primary:hover {
+    background-color: #000;
+    border-color: #ffe81f;
+    color: #ffe81f;
+  }
+
+  .btn-secondary {
+    background-color: #000;
+    border-color: #ffe81f;
+    color: #ffe81f;
+  }
+
+  .btn-secondary:hover {
+    background-color: #ffe81f;
+    border-color: #ffe81f;
+    color: #000;
+  }
+
+  .buttonF{
+    background-color: #ffe81f;
+    border-color: #ffe81f;
+    color: #000;
+  }
+
+  .buttonF:hover {
+    background-color: #000;
+    border-color: #ffe81f;
+    color: #ffe81f;
+  }
+
+
+
+

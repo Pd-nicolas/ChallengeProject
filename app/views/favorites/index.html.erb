@@ -1,0 +1,30 @@
+<h1>Star Wars Favorites</h1>
+
+<%= link_to "Home", search_path, class: "btn btn-secondary" %>
+
+<br> <br>
+
+<% if @favorites.present? %>
+
+  <ul>
+    <% @favorites.each do |url| %>
+
+      <% response = RestClient.get(url) %>
+
+      <% item = JSON.parse(response.body) %>
+
+      <li>
+        <h2><%= item['name'] %></h2>
+        <%= button_to 'Remove from Favorites', toggle_favorite_path(id: url), method: :post %>
+      </li>
+    <% end %>
+  </ul>
+
+<% else %>
+
+  <p>You haven't added any favorites yet.</p>
+
+<% end %>
+
+
+
